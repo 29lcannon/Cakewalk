@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakewalk Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #ffa500;
+            color: white;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+        }
+        form {
+            margin-bottom: 2rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input[type="text"] {
+            padding: 0.5rem;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 1rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+        a {
+            color: #ffa500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cakewalk Dashboard</h1>
+    </header>
+    <main>
+        <form id="experiment-form">
+            <label for="name">Experiment name</label>
+            <input type="text" id="name" required>
+            <button type="submit">Create Experiment</button>
+        </form>
+        <h2>Your Experiments</h2>
+        <ul id="experiments-list">
+            <li>Signup CTA Test</li>
+            <li>Pricing Page Variation</li>
+        </ul>
+    </main>
+    <script>
+        const form = document.getElementById('experiment-form');
+        const list = document.getElementById('experiments-list');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            if (name) {
+                const li = document.createElement('li');
+                li.textContent = name;
+                list.appendChild(li);
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>
