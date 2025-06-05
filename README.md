@@ -28,3 +28,14 @@ Cakewalk is a no-code A/B testing and experimentation platform designed for star
 4. **Enable Auto-Optimize** to automatically promote the winning variation once a clear leader emerges.
 
 Cakewalk aims to make experimentation second nature by giving teams the ability to go from idea to insight in minutes.
+
+## Development server
+
+To run the prototype locally:
+
+```bash
+npm install
+npm start
+```
+
+Then visit [http://localhost:3000](http://localhost:3000) in your browser. The dashboard is available at `/dashboard`.
